@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: vxraildemo1
+Bundle-SymbolicName: vxraildemo1;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.ddlab.rcp.core.Activator
+Bundle-Vendor: DD Lab inc.
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.equinox.ds,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ org.eclipse.ui.forms,
+ org.eclipse.e4.ui.css.swt.theme,
+ org.eclipse.e4.ui.css.core,
+ org.eclipse.e4.ui.css.swt,
+ org.w3c.css.sac,
+ org.eclipse.ui.browser,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: vxraildemo1
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin

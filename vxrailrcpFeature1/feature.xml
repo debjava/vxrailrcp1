@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="vxrailrcpFeature1"
+      label="VxrailrcpFeature1"
+      version="1.0.0">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.eclipse.equinox.p2.extras.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.equinox.ds"/>
+      <import plugin="org.eclipse.equinox.util"/>
+      <import plugin="org.eclipse.equinox.event"/>
+      <import plugin="org.eclipse.ui.forms"/>
+      <import plugin="org.eclipse.e4.ui.css.swt.theme"/>
+      <import plugin="org.eclipse.e4.ui.css.core"/>
+      <import plugin="org.eclipse.e4.ui.css.swt"/>
+      <import plugin="org.w3c.css.sac"/>
+      <import plugin="org.eclipse.ui.browser"/>
+      <import plugin="org.eclipse.core.resources"/>
+   </requires>
+
+   <plugin
+         id="vxraildemo1"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

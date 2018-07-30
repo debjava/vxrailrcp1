@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>vxrailrcpProduct1</groupId> <!-- Must be unique -->
+	<artifactId>vxrailrcpProduct1</artifactId> <!-- Must be unique -->
+	<url>http://maven.apache.org</url>
+	<packaging>eclipse-repository</packaging>
+
+	<parent>
+		<groupId>vxrailrcp1</groupId>
+		<artifactId>vxrailrcp1</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<formats>
+						<win32>zip</win32>
+						<linux>tar.gz</linux>
+						<macosx>tar.gz</macosx>
+						<solaris>tar.gz</solaris>
+					</formats>
+					<!-- <products> <product> <id>vxrailrcp-prod</id> <archiveFileName>vxraildemo1-${project.version}</archiveFileName> 
+						<rootFolders> <macosx>vxraildemo1.app</macosx> <win32>vxraildemo1</win32> 
+						<linux>vxraildemo1</linux> <solaris>vxraildemo1</solaris> </rootFolders> 
+						</product> </products> -->
+					<products>
+						<product>
+							<id>vxrailrcp-prod</id>
+							<archiveFileName>vxrailrcp-${project.version}</archiveFileName>
+							<rootFolders>
+								<macosx>vxrailrcp.app</macosx>
+								<win32>vxrailrcp</win32>
+								<linux>vxrailrcp</linux>
+							</rootFolders>
+						</product>
+					</products>
+				</configuration>
+				<executions>
+					<execution>
+						<id>materialize-products</id>
+						<goals>
+							<goal>materialize-products</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>archive-products</id>
+						<goals>
+							<goal>archive-products</goal> <!-- Create respective zip file -->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
